@@ -4,8 +4,8 @@
             {% if fmi_version == "fmi1" %}FMI 1.0{% else %}FMI 2.0{% endif %}
         </button>
         <div class="dropdown-menu" aria-labelledby="fmiVersionButton">
-            <a class="dropdown-item" href="{{ "/cross-check/fmi1-{{ fmi_type }}-{{ platform }}/" | relative_url }}">FMI 1.0</a>
-            <a class="dropdown-item" href="{{ "/cross-check/fmi2-{{ fmi_type }}-{{ platform }}/" | relative_url }}">FMI 2.0</a>
+            <a class="dropdown-item" href="{{ "/cross-check/" | relative_url }}fmi1-{{ fmi_type }}-{{ platform }}/">FMI 1.0</a>
+            <a class="dropdown-item" href="{{ "/cross-check/" | relative_url }}fmi2-{{ fmi_type }}-{{ platform }}/">FMI 2.0</a>
         </div>
     </div>
     <div class="dropdown mr-2">
