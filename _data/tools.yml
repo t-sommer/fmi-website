@@ -123,3 +123,42 @@
     cs:
       fmi1: available
       fmi2: available
+
+- vendor: QTronic
+  name: Silver
+  platforms: [win32, win64]
+  description: Generation of virtual ECUs and virtual integration platform for Software in the Loop from QTronic
+  export:
+    me:
+      fmi1: available
+      fmi2: available
+    cs:
+      fmi1: available
+      fmi2: available
+  import:
+    me:
+      fmi1: available
+      fmi2: available
+    cs:
+      fmi1: available
+      fmi2: available
+
+- vendor: QTronic
+  name: FMUSDK
+  platforms: [c-code, darwin64, linux32, linux64, win32, win64]
+  license: osi
+  description: FMU Software Development Kit from QTronic
+  export:
+    me:
+      fmi1: available
+      fmi2: available
+    cs:
+      fmi1: available
+      fmi2: available
+  import:
+    me:
+      fmi1: available
+      fmi2: available
+    cs:
+      fmi1: available
+      fmi2: available
