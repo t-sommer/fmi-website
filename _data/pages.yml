@@ -1,0 +1,20 @@
+- title: Home
+  url: /
+
+- title: Releases
+  url: /releases/
+
+- title: Tools
+  url: /tools/
+
+- title: Cross-Check
+  url: /cross-check/
+
+- title: Contributing
+  url: /contributing/
+
+# - title: FAQ
+#   url: /faq/
+
+- title: About
+  url: /about/

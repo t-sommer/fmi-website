@@ -1,0 +1,158 @@
+---
+layout: default
+permalink: /tools/
+---
+
+<form class="form-inline" id="filters">
+  <div class="btn-toolbar" role="toolbar">
+    <div class="btn-group" role="group">
+      <button id="btn-ccode" type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="C-code">C</button>
+      <button id="btn-macos" type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="macOS"><i class="fab fa-apple"></i></button>
+      <button id="btn-linux" type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Linux"><i class="fab fa-linux"></i></button>
+      <button id="btn-windows" type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Windows"><i class="fab fa-windows"></i></button>
+    </div>
+  </div>
+  <div class="btn-toolbar" role="toolbar">
+    <div class="btn-group ml-3" role="group">
+      <button id="btn-commercial" type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Commercial"><i class="fas fa-dollar-sign"></i></button>
+      <button id="btn-opensource" type="button" class="btn btn-primary" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Open Source"><i class="fab fa-osi"></i></button>
+    </div>
+  </div>
+  <input id="inp-filter" type="text" class="form-control ml-3" value="" placeholder="Filter">
+</form>
+
+<table class="table table-sm table-tools mt-4" id="tbl-results">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th colspan="2" class="text-center">FMU Export</th>
+      <th colspan="2" class="text-center">FMU Import</th>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <th>Vendor</th>
+      <th class="text-center">License</th>
+      <th class="text-center">Platforms</th>
+      <th class="text-center">Co-Simulation</th>
+      <th class="text-center">Model Exchange</th>
+      <th class="text-center">Co-Simulation</th>
+      <th class="text-center">Model Exchange</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for tool in site.data.tools %}
+    <tr>
+      <td data-platforms="{{ tool.platforms | join: ',' }}"><a href="#" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="{{ tool.description }}">{{ tool.name }}</a></td>
+      <td>{{ tool.vendor }}</td>
+      <td class="text-center">{% if tool.license == "osi" %}<i class="fab fa-osi"></i>{% else %}<i class="fas fa-dollar-sign"></i>{% endif %}</td>
+      <td class="text-center">
+        <i class="fas fa-code{% unless tool.platforms contains "c-code" %} fa-blank{% endunless %}"></i>
+        <i class="fab fa-apple{% unless tool.platforms contains "darwin64" %} fa-blank{% endunless %}"></i>
+        <i class="fab fa-linux{% unless tool.platforms contains "linux32" or tool.platforms contains "linux64" %} fa-blank{% endunless %}"></i>
+        <i class="fab fa-windows{% unless tool.platforms contains "win32" or tool.platforms contains "win64" %} fa-blank{% endunless %}"></i>
+      </td>
+      <td class="text-center">
+        <div class="btn-group" role="group">
+          <a class="btn btn-sm {% if tool.export.cs.fmi1 == "available" %}btn-success{% elsif tool.export.cs.fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="/cross-check/fmi1-cs-win64/" role="button">1.0</a>
+          <a class="btn btn-sm {% if tool.export.cs.fmi2 == "available" %}btn-success{% elsif tool.export.cs.fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="/cross-check/fmi2-cs-win64/" role="button">2.0</a>
+        </div>
+      </td>
+      <td class="text-center">
+        <div class="btn-group" role="group">
+          <a class="btn btn-sm {% if tool.export.me.fmi1 == "available" %}btn-success{% elsif tool.export.me.fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="/cross-check/fmi1-me-win64/" role="button">1.0</a>
+          <a class="btn btn-sm {% if tool.export.me.fmi2 == "available" %}btn-success{% elsif tool.export.me.fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="/cross-check/fmi2-me-win64/" role="button">2.0</a>
+        </div>
+      </td>
+      <td class="text-center">
+        <div class="btn-group" role="group">
+          <a class="btn btn-sm {% if tool.import.cs.fmi1 == "available" %}btn-success{% elsif tool.import.cs.fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="/cross-check/fmi1-cs-win64/" role="button">1.0</a>
+          <a class="btn btn-sm {% if tool.import.cs.fmi2 == "available" %}btn-success{% elsif tool.import.cs.fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="/cross-check/fmi2-cs-win64/" role="button">2.0</a>
+        </div>
+      </td>
+      <td class="text-center">
+        <div class="btn-group" role="group">
+          <a class="btn btn-sm {% if tool.import.me.fmi1 == "available" %}btn-success{% elsif tool.import.me.fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="/cross-check/fmi1-me-win64/" role="button">1.0</a>
+          <a class="btn btn-sm {% if tool.import.me.fmi2 == "available" %}btn-success{% elsif tool.import.me.fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="/cross-check/fmi2-me-win64/" role="button">2.0</a>
+        </div>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<script>
+// see https://github.com/twbs/bootstrap/issues/2380
+$('body').on('click','#filters button', function() {
+
+    var button = $(this);
+
+    // commercial & open source are mutually exclusive
+    if (button.attr('id') === 'btn-commercial') {
+      $('#btn-opensource').removeClass('active');
+    } else if (button.attr('id') === 'btn-opensource') {
+      $('#btn-commercial').removeClass('active');
+    }
+
+    button.toggleClass('active');
+
+    filterRows();
+});
+
+$("#inp-filter").keyup(function() {
+  filterRows();
+});
+
+function filterRows() {
+
+  var table = document.getElementById("tbl-results");
+  var tr = table.getElementsByTagName("tr");
+
+  var showCCode   = $("#btn-ccode").hasClass('active');
+  var showMacOS   = $("#btn-macos").hasClass('active');
+  var showLinux   = $("#btn-linux").hasClass('active');
+  var showWindows = $("#btn-windows").hasClass('active');
+
+  var showCommercial = $("#btn-commercial").hasClass('active');
+  var showOpenSource = $("#btn-opensource").hasClass('active');
+
+  var filter = $("#inp-filter").val().trim().toLowerCase();
+
+  for (var i = 0; i < tr.length; i++) {
+
+    var td0 = tr[i].getElementsByTagName("td")[0];
+    var td1 = tr[i].getElementsByTagName("td")[1];
+    var td2 = tr[i].getElementsByTagName("td")[2];
+
+    var commercial = $(td2).find("i").hasClass("fa-dollar-sign");
+
+    if (td0) {
+
+      var tool = $(td0).find("a").text().toLowerCase();
+      var vendor = $(td1).text().toLowerCase();
+      var platforms = $(td0).attr("data-platforms");
+
+      if (
+        (showCCode   && !platforms.includes("c-code"))   ||
+        (showMacOS   && !platforms.includes("darwin64")) ||
+        (showLinux   && !platforms.includes("linux64"))  ||
+        (showWindows && !platforms.includes("win64"))    ||
+        (showCommercial && !commercial) ||
+        (showOpenSource && commercial)  ||
+        (filter != "" && !tool.includes(filter) && !vendor.includes(filter))
+      ) {
+        tr[i].style.display = "none";
+        continue;
+      }
+
+      tr[i].style.display = "";
+    }
+
+  }
+}
+
+filterRows();
+
+</script>

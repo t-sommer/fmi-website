@@ -1,0 +1,183 @@
+<style>
+th.rotate {
+  /* Something you can count on */
+  height: 140px;
+  white-space: nowrap;
+}
+
+th.rotate > div {
+  transform:
+    /* Magic Numbers */
+    translate(25px, 51px)
+    /* 45 is really 360 - 45 */
+    rotate(315deg);
+  width: 30px;
+}
+
+th.rotate > div > span {
+  border-bottom: 1px solid #ccc;
+  padding: 5px 10px;
+}
+
+.badge {
+    width: 3em;
+}
+</style>
+
+</head>
+
+<body>
+
+<main role="main" class="container">
+
+    <div class="btn-toolbar" role="toolbar">
+        <div class="dropdown mr-2">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="fmiVersionButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                FMI_2.0
+            </button>
+            <div class="dropdown-menu" aria-labelledby="fmiVersionButton">
+                <a class="dropdown-item" href="FMI_1.0-CoSimulation-win64.html">FMI 1.0</a>
+                <a class="dropdown-item" href="FMI_2.0-CoSimulation-win64.html">FMI 2.0</a>
+            </div>
+        </div>
+        <div class="dropdown mr-2">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="fmiTypeButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                CoSimulation
+            </button>
+            <div class="dropdown-menu" aria-labelledby="fmiTypeButton">
+                <a class="dropdown-item" href="FMI_2.0-CoSimulation-win64.html">Co-Simulation</a>
+                <a class="dropdown-item" href="FMI_2.0-ModelExchange-win64.html">Model Exchange</a>
+            </div>
+        </div>
+        <div class="dropdown mr-2">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="platformButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fab fa-windows"></i> win64
+            </button>
+            <div class="dropdown-menu" aria-labelledby="platformButton">
+                <a class="dropdown-item" href="FMI_2.0-CoSimulation-c-code.html">C-Code</a>
+                <a class="dropdown-item" href="FMI_2.0-CoSimulation-darwin64.html">macOS</a>
+                <a class="dropdown-item" href="FMI_2.0-CoSimulation-linux32.html">Linux 32-bit</a>
+                <a class="dropdown-item" href="FMI_2.0-CoSimulation-linux64.html">Linux 64-bit</a>
+                <a class="dropdown-item" href="FMI_2.0-CoSimulation-win32.html">Windows 32-bit</a>
+                <a class="dropdown-item" href="FMI_2.0-CoSimulation-win64.html">Windows 64-bit</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive mt-5">
+        <table class="table table-sm">
+            <tr>
+                <th></th>
+                                <th class="rotate"><div><span>20sim</span></div></th>
+                                <th class="rotate"><div><span>AMESim</span></div></th>
+                                <th class="rotate"><div><span>CATIA</span></div></th>
+                                <th class="rotate"><div><span>ControlBuild</span></div></th>
+                                <th class="rotate"><div><span>DS_FMU_Export_from_Simulink</span></div></th>
+                                <th class="rotate"><div><span>Dymola</span></div></th>
+                                <th class="rotate"><div><span>Easy5</span></div></th>
+                                <th class="rotate"><div><span>EcosimPro</span></div></th>
+                                <th class="rotate"><div><span>FMIToolbox_MATLAB</span></div></th>
+                                <th class="rotate"><div><span>FMUSDK</span></div></th>
+                                <th class="rotate"><div><span>MWorks</span></div></th>
+                                <th class="rotate"><div><span>MapleSim</span></div></th>
+                                <th class="rotate"><div><span>PROOSIS</span></div></th>
+                                <th class="rotate"><div><span>Silver</span></div></th>
+                                <th class="rotate"><div><span>SimulationX</span></div></th>
+                            </tr>
+                        <tr>
+                <th>CATIA</th>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-success">3</span></td>
+                                <td><span class="badge badge-success">16</span></td>
+                                <td><span class="badge badge-success">6</span></td>
+                                <td><span class="badge badge-success">15</span></td>
+                                <td><span class="badge badge-success">24</span></td>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-success">10</span></td>
+                                <td><span class="badge badge-success">3</span></td>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-success">6</span></td>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-success">4</span></td>
+                            </tr>
+                        <tr>
+                <th>Dymola</th>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-success">3</span></td>
+                                <td><span class="badge badge-success">5</span></td>
+                                <td><span class="badge badge-success">8</span></td>
+                                <td><span class="badge badge-success">52</span></td>
+                                <td><span class="badge badge-success">61</span></td>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-success">19</span></td>
+                                <td><span class="badge badge-success">21</span></td>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-success">30</span></td>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-success">3</span></td>
+                                <td><span class="badge badge-success">3</span></td>
+                            </tr>
+                        <tr>
+                <th>FMPy</th>
+                                <td><span class="badge badge-success">3</span></td>
+                                <td><span class="badge badge-light">2</span></td>
+                                <td><span class="badge badge-success">11</span></td>
+                                <td><span class="badge badge-success">4</span></td>
+                                <td><span class="badge badge-success">19</span></td>
+                                <td><span class="badge badge-success">25</span></td>
+                                <td><span class="badge badge-light">2</span></td>
+                                <td><span class="badge badge-success">3</span></td>
+                                <td><span class="badge badge-success">10</span></td>
+                                <td><span class="badge badge-success">14</span></td>
+                                <td><span class="badge badge-success">7</span></td>
+                                <td><span class="badge badge-success">15</span></td>
+                                <td><span class="badge badge-light">2</span></td>
+                                <td><span class="badge badge-success">3</span></td>
+                                <td><span class="badge badge-success">5</span></td>
+                            </tr>
+                        <tr>
+                <th>SIMPACK</th>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-success">3</span></td>
+                                <td><span class="badge badge-success">5</span></td>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-success">15</span></td>
+                                <td><span class="badge badge-success">25</span></td>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-success">10</span></td>
+                                <td><span class="badge badge-success">8</span></td>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-success">12</span></td>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-light">2</span></td>
+                                <td><span class="badge badge-success">5</span></td>
+                            </tr>
+                        <tr>
+                <th>Silver</th>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-success">3</span></td>
+                                <td><span class="badge badge-success">5</span></td>
+                                <td><span class="badge badge-success">5</span></td>
+                                <td><span class="badge badge-success">4</span></td>
+                                <td><span class="badge badge-success">24</span></td>
+                                <td><span class="badge badge-success">3</span></td>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-success">10</span></td>
+                                <td><span class="badge badge-success">16</span></td>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-success">12</span></td>
+                                <td><span class="badge badge-light">0</span></td>
+                                <td><span class="badge badge-success">3</span></td>
+                                <td><span class="badge badge-light">0</span></td>
+                            </tr>
+                        <tr>
+
+            </tr>
+        </table>
+    </div>
+
+</main>

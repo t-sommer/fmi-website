@@ -1,0 +1,86 @@
+- vendor: Dassault Syst&egrave;mes
+  name: Dymola
+  platforms: [c-code, linux64, win32, win64]
+  description: Modelica environment from Dassault Syst&egrave;mes
+  export:
+    me:
+      fmi1: available
+      fmi2: available
+    cs:
+      fmi1: available
+      fmi2: available
+  import:
+    me:
+      fmi1: available
+      fmi2: available
+    cs:
+      fmi1: available
+      fmi2: available
+
+- vendor: Dassault Syst&egrave;mes
+  name: FMPy
+  platforms: [c-code, darwin64, linux64, win32, win64]
+  license: osi
+  description: A Python library to simulate FMUs
+  export:
+    me:
+      fmi2: planned
+    cs:
+      fmi2: planned
+  import:
+    me:
+      fmi1: available
+      fmi2: available
+    cs:
+      fmi1: available
+      fmi2: available
+
+- vendor: MSC Software
+  platforms: [linux64, win64]
+  name: Adams
+  link: http://www.mscsoftware.com/Products/CAE-Tools/Adams.aspx
+  description: High end multibody dynamics simulation software from MSC Software
+  export:
+    cs:
+      fmi1: available
+      fmi2: available
+  import:
+    me:
+      fmi1: available
+      fmi2: available
+    cs:
+      fmi1: available
+      fmi2: available
+
+- name: Simplorer
+  vendor: ANSYS
+  platforms: [linux64, win64]
+  link: https://www.ansys.com/products/systems/ansys-twin-builder
+  description: ANSYS Simplorer is a multi-domain, multi-technology simulation program
+  export:
+    me:
+      fmi1: available
+      fmi2: available
+    cs:
+      fmi1: planned
+      fmi2: planned
+  import:
+    me:
+      fmi1: available
+      fmi2: available
+    cs:
+      fmi1: available
+      fmi2: available
+
+- name: Model.CONNECT
+  vendor: AVL
+  platforms: [win64]
+  link: https://www.avl.com/en/web/10138/iodp
+  description: Model.CONNECT is a neutral model integration and co-simulation platform to connect virtual and real components for virtual, physical and mixed testing scenarios in office, HiL and testbed environments.
+  import:
+    me:
+      fmi1: available
+      fmi2: available
+    cs:
+      fmi1: available
+      fmi2: available
