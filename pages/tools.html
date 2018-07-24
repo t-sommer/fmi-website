@@ -56,26 +56,26 @@ permalink: /tools/
       </td>
       <td class="text-center">
         <div class="btn-group" role="group">
-          <a class="btn btn-sm {% if tool.export.cs.fmi1 == "available" %}btn-success{% elsif tool.export.cs.fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="/cross-check/fmi1-cs-win64/" role="button">1.0</a>
-          <a class="btn btn-sm {% if tool.export.cs.fmi2 == "available" %}btn-success{% elsif tool.export.cs.fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="/cross-check/fmi2-cs-win64/" role="button">2.0</a>
+          <a class="btn btn-sm {% if tool.export.cs.fmi1 == "available" %}btn-success{% elsif tool.export.cs.fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi1-cs-win64/" | relative_url }}" role="button">1.0</a>
+          <a class="btn btn-sm {% if tool.export.cs.fmi2 == "available" %}btn-success{% elsif tool.export.cs.fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi2-cs-win64/" | relative_url }}" role="button">2.0</a>
         </div>
       </td>
       <td class="text-center">
         <div class="btn-group" role="group">
-          <a class="btn btn-sm {% if tool.export.me.fmi1 == "available" %}btn-success{% elsif tool.export.me.fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="/cross-check/fmi1-me-win64/" role="button">1.0</a>
-          <a class="btn btn-sm {% if tool.export.me.fmi2 == "available" %}btn-success{% elsif tool.export.me.fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="/cross-check/fmi2-me-win64/" role="button">2.0</a>
+          <a class="btn btn-sm {% if tool.export.me.fmi1 == "available" %}btn-success{% elsif tool.export.me.fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi1-me-win64/" | relative_url }}" role="button">1.0</a>
+          <a class="btn btn-sm {% if tool.export.me.fmi2 == "available" %}btn-success{% elsif tool.export.me.fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi2-me-win64/" | relative_url }}" role="button">2.0</a>
         </div>
       </td>
       <td class="text-center">
         <div class="btn-group" role="group">
-          <a class="btn btn-sm {% if tool.import.cs.fmi1 == "available" %}btn-success{% elsif tool.import.cs.fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="/cross-check/fmi1-cs-win64/" role="button">1.0</a>
-          <a class="btn btn-sm {% if tool.import.cs.fmi2 == "available" %}btn-success{% elsif tool.import.cs.fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="/cross-check/fmi2-cs-win64/" role="button">2.0</a>
+          <a class="btn btn-sm {% if tool.import.cs.fmi1 == "available" %}btn-success{% elsif tool.import.cs.fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi1-cs-win64/" | relative_url }}" role="button">1.0</a>
+          <a class="btn btn-sm {% if tool.import.cs.fmi2 == "available" %}btn-success{% elsif tool.import.cs.fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi2-cs-win64/" | relative_url }}" role="button">2.0</a>
         </div>
       </td>
       <td class="text-center">
         <div class="btn-group" role="group">
-          <a class="btn btn-sm {% if tool.import.me.fmi1 == "available" %}btn-success{% elsif tool.import.me.fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="/cross-check/fmi1-me-win64/" role="button">1.0</a>
-          <a class="btn btn-sm {% if tool.import.me.fmi2 == "available" %}btn-success{% elsif tool.import.me.fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="/cross-check/fmi2-me-win64/" role="button">2.0</a>
+          <a class="btn btn-sm {% if tool.import.me.fmi1 == "available" %}btn-success{% elsif tool.import.me.fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi1-me-win64/" | relative_url }}" role="button">1.0</a>
+          <a class="btn btn-sm {% if tool.import.me.fmi2 == "available" %}btn-success{% elsif tool.import.me.fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi2-me-win64/" | relative_url }}" role="button">2.0</a>
         </div>
       </td>
     </tr>
