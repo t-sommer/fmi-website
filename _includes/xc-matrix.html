@@ -4,8 +4,8 @@
             {% if fmi_version == "fmi1" %}FMI 1.0{% else %}FMI 2.0{% endif %}
         </button>
         <div class="dropdown-menu" aria-labelledby="fmiVersionButton">
-            <a class="dropdown-item" href="/cross-check/fmi1-{{ fmi_type }}-{{ platform }}/">FMI 1.0</a>
-            <a class="dropdown-item" href="/cross-check/fmi2-{{ fmi_type }}-{{ platform }}/">FMI 2.0</a>
+            <a class="dropdown-item" href="{{ /cross-check/fmi1-{{ fmi_type }}-{{ platform }}/ | relative_url }}">FMI 1.0</a>
+            <a class="dropdown-item" href="{{ /cross-check/fmi2-{{ fmi_type }}-{{ platform }}/ | relative_url }}">FMI 2.0</a>
         </div>
     </div>
     <div class="dropdown mr-2">
@@ -13,8 +13,8 @@
           {% if fmi_type == "cs" %}Co-Simulation{% else %}Model Exchange{% endif %}
         </button>
         <div class="dropdown-menu" aria-labelledby="fmiTypeButton">
-            <a class="dropdown-item" href="/cross-check/{{ fmi_version }}-cs-{{ platform }}/">Co-Simulation</a>
-            <a class="dropdown-item" href="/cross-check/{{ fmi_version }}-me-{{ platform }}/">Model Exchange</a>
+            <a class="dropdown-item" href="{{ /cross-check/{{ fmi_version }}-cs-{{ platform }}/ | relative_url }}">Co-Simulation</a>
+            <a class="dropdown-item" href="{{ /cross-check/{{ fmi_version }}-me-{{ platform }}/ | relative_url }}">Model Exchange</a>
         </div>
     </div>
     <div class="dropdown mr-2">
@@ -34,12 +34,12 @@
           {% endif %}
         </button>
         <div class="dropdown-menu" aria-labelledby="platformButton">
-            <a class="dropdown-item" href="/cross-check/{{ fmi_version }}-{{ fmi_type }}-ccode/">C-code</a>
-            <a class="dropdown-item" href="/cross-check/{{ fmi_version }}-{{ fmi_type }}-darwin64/">macOS</a>
-            <a class="dropdown-item" href="/cross-check/{{ fmi_version }}-{{ fmi_type }}-linux32/">Linux 32-bit</a>
-            <a class="dropdown-item" href="/cross-check/{{ fmi_version }}-{{ fmi_type }}-linux64/">Linux 64-bit</a>
-            <a class="dropdown-item" href="/cross-check/{{ fmi_version }}-{{ fmi_type }}-win32/">Windows 32-bit</a>
-            <a class="dropdown-item" href="/cross-check/{{ fmi_version }}-{{ fmi_type }}-win64/">Windows 64-bit</a>
+            <a class="dropdown-item" href="{{ /cross-check/{{ fmi_version }}-{{ fmi_type }}-ccode/ | relative_url }}">C-code</a>
+            <a class="dropdown-item" href="{{ /cross-check/{{ fmi_version }}-{{ fmi_type }}-darwin64/ | relative_url }}">macOS</a>
+            <a class="dropdown-item" href="{{ /cross-check/{{ fmi_version }}-{{ fmi_type }}-linux32/ | relative_url }}">Linux 32-bit</a>
+            <a class="dropdown-item" href="{{ /cross-check/{{ fmi_version }}-{{ fmi_type }}-linux64/ | relative_url }}">Linux 64-bit</a>
+            <a class="dropdown-item" href="{{ /cross-check/{{ fmi_version }}-{{ fmi_type }}-win32/ | relative_url }}">Windows 32-bit</a>
+            <a class="dropdown-item" href="{{ /cross-check/{{ fmi_version }}-{{ fmi_type }}-win64/ | relative_url }}">Windows 64-bit</a>
         </div>
     </div>
 </div>
