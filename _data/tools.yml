@@ -84,3 +84,42 @@
     cs:
       fmi1: available
       fmi2: available
+
+- name: SCALEXIO
+  vendor: dSPACE
+  platforms: [c-code]
+  link: https://www.dspace.com/go/fmi
+  description: dSPACE SCALEXIO is a Hardware-in-the-Loop (HIL) integration and simulation platform from dSPACE
+  import:
+    cs:
+      fmi1: available
+      fmi2: available
+
+- name: SYNECT
+  vendor: dSPACE
+  platforms: [c-code]
+  link: https://www.dspace.com/go/fmi
+  description: dSPACE SYNECT is a data management tool from dSPACE that enables you to manage FMUs and Simulink models as well as their dependencies, versions and variants throughout the entire software development process
+  import:
+    cs:
+      fmi1: planned
+      fmi2: available
+
+- name: TargetLink
+  vendor: dSPACE
+  platforms: [c-code]
+  link: https://www.dspace.com/go/fmi
+  description: TargetLink is a production code generator from dSPACE that generates highly efficient C-code directly from Simulink/Stateflow models
+  export:
+    cs:
+      fmi2: available
+
+- name: VEOS
+  vendor: dSPACE
+  platforms: [c-code, win32]
+  link: https://www.dspace.com/go/fmi
+  description: dSPACE VEOS is a PC-based virtual integration and simulation platform from dSPACE
+  import:
+    cs:
+      fmi1: available
+      fmi2: available
