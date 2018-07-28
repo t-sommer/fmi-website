@@ -1,6 +1,3 @@
-- title: Home
-  url: /
-
 - title: Releases
   url: /releases/
 
@@ -12,9 +9,6 @@
 
 - title: Contributing
   url: /contributing/
-
-# - title: FAQ
-#   url: /faq/
 
 - title: About
   url: /about/
