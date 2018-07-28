@@ -1,6 +1,7 @@
 ---
-layout: default
+title: Imprint
 permalink: /imprint/
+layout: default
 ---
 
 # Imprint

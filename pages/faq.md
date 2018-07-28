@@ -1,6 +1,7 @@
 ---
-layout: default
+title: FAQ
 permalink: /faq/
+layout: default
 ---
 
 ## General questions about FMI

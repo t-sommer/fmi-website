@@ -1,6 +1,7 @@
 ---
-layout: default
+title: Privacy
 permalink: /privacy/
+layout: default
 ---
 
 # Privacy Policy
