@@ -4,6 +4,23 @@ permalink: /tools/
 layout: default
 ---
 
+<style>
+
+.table-tools td.first {
+    max-width: 177px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table-tools td.first a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 100%;
+}
+</style>
+
 <form class="form-inline" id="filters">
   <div class="btn-toolbar" role="toolbar">
     <div class="btn-group" role="group">
@@ -22,7 +39,7 @@ layout: default
   <input id="inp-filter" type="text" class="form-control ml-3" value="" placeholder="Filter">
 </form>
 
-<table class="table table-sm table-tools mt-4" id="tbl-results">
+<table class="table table-tools mt-4" id="tbl-results">
   <thead>
     <tr>
       <th></th>
@@ -34,7 +51,7 @@ layout: default
     </tr>
     <tr>
       <th>Name</th>
-      <th>Vendor</th>
+      <th></th>
       <th class="text-center">License</th>
       <th class="text-center">Platforms</th>
       <th class="text-center">Co-Simulation</th>
@@ -46,7 +63,7 @@ layout: default
   <tbody>
     {% for tool in site.data.tools %}
     <tr>
-      <td data-platforms="{{ tool.platforms | join: ',' }}"><a href="#" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="{{ tool.description }}">{{ tool.name }}</a></td>
+      <td class="first" data-platforms="{{ tool.platforms | join: ',' }}"><a href="{{ tool.homepage }}" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="{{ tool.description }}">{{ tool.name }}</a></td>
       <td>{{ tool.vendor }}</td>
       <td class="text-center">{% if tool.license == "osi" %}<i class="fab fa-osi"></i>{% else %}<i class="fas fa-dollar-sign"></i>{% endif %}</td>
       <td class="text-center">
@@ -57,32 +74,34 @@ layout: default
       </td>
       <td class="text-center">
         <div class="btn-group" role="group">
-          <a class="btn btn-sm {% if tool.export.cs.fmi1 == "available" %}btn-success{% elsif tool.export.cs.fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi1-cs-win64/" | relative_url }}" role="button">1.0</a>
-          <a class="btn btn-sm {% if tool.export.cs.fmi2 == "available" %}btn-success{% elsif tool.export.cs.fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi2-cs-win64/" | relative_url }}" role="button">2.0</a>
+          <a class="btn btn-sm {% if tool.export_cs_fmi1 == "available" %}btn-success{% elsif tool.export_cs_fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi1-cs-win64/" | relative_url }}" role="button">1.0</a>
+          <a class="btn btn-sm {% if tool.export_cs_fmi2 == "available" %}btn-success{% elsif tool.export_cs_fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi2-cs-win64/" | relative_url }}" role="button">2.0</a>
         </div>
       </td>
       <td class="text-center">
         <div class="btn-group" role="group">
-          <a class="btn btn-sm {% if tool.export.me.fmi1 == "available" %}btn-success{% elsif tool.export.me.fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi1-me-win64/" | relative_url }}" role="button">1.0</a>
-          <a class="btn btn-sm {% if tool.export.me.fmi2 == "available" %}btn-success{% elsif tool.export.me.fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi2-me-win64/" | relative_url }}" role="button">2.0</a>
+          <a class="btn btn-sm {% if tool.export_me_fmi1 == "available" %}btn-success{% elsif tool.export_me_fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi1-me-win64/" | relative_url }}" role="button">1.0</a>
+          <a class="btn btn-sm {% if tool.export_me_fmi2 == "available" %}btn-success{% elsif tool.export_me_fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi2-me-win64/" | relative_url }}" role="button">2.0</a>
         </div>
       </td>
       <td class="text-center">
         <div class="btn-group" role="group">
-          <a class="btn btn-sm {% if tool.import.cs.fmi1 == "available" %}btn-success{% elsif tool.import.cs.fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi1-cs-win64/" | relative_url }}" role="button">1.0</a>
-          <a class="btn btn-sm {% if tool.import.cs.fmi2 == "available" %}btn-success{% elsif tool.import.cs.fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi2-cs-win64/" | relative_url }}" role="button">2.0</a>
+          <a class="btn btn-sm {% if tool.import_cs_fmi1 == "available" %}btn-success{% elsif tool.import_cs_fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi1-cs-win64/" | relative_url }}" role="button">1.0</a>
+          <a class="btn btn-sm {% if tool.import_cs_fmi2 == "available" %}btn-success{% elsif tool.import_cs_fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi2-cs-win64/" | relative_url }}" role="button">2.0</a>
         </div>
       </td>
       <td class="text-center">
         <div class="btn-group" role="group">
-          <a class="btn btn-sm {% if tool.import.me.fmi1 == "available" %}btn-success{% elsif tool.import.me.fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi1-me-win64/" | relative_url }}" role="button">1.0</a>
-          <a class="btn btn-sm {% if tool.import.me.fmi2 == "available" %}btn-success{% elsif tool.import.me.fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi2-me-win64/" | relative_url }}" role="button">2.0</a>
+          <a class="btn btn-sm {% if tool.import_me_fmi1 == "available" %}btn-success{% elsif tool.import_me_fmi1 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi1-me-win64/" | relative_url }}" role="button">1.0</a>
+          <a class="btn btn-sm {% if tool.import_me_fmi2 == "available" %}btn-success{% elsif tool.import_me_fmi2 == "planned" %}btn-outline-success{% else %}btn-outline-light{% endif %}" href="{{ "/cross-check/fmi2-me-win64/" | relative_url }}" role="button">2.0</a>
         </div>
       </td>
     </tr>
     {% endfor %}
   </tbody>
 </table>
+
+</div>
 
 <script>
 // see https://github.com/twbs/bootstrap/issues/2380
