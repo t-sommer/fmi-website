@@ -1,14 +1,26 @@
-- title: Releases
-  url: /releases/
+- title: Start
+  url: /
+
+- title: Downloads
+  url: /downloads/
 
 - title: Tools
   url: /tools/
 
-- title: Cross-Check
-  url: /cross-check/
+- title: Related
+  url: /related/
 
-- title: Contributing
-  url: /contributing/
+- title: Development
+  url: /development/
 
-- title: About
-  url: /about/
+- title: Literature
+  url: /literature/
+
+- title: History
+  url: /history/
+
+- title: FAQ
+  url: /faq/
+
+- title: Contact
+  url: /contact/
