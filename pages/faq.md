@@ -2,11 +2,12 @@
 title: FAQ
 permalink: /faq/
 layout: default
+toc: true
 ---
 
-## General questions about FMI
+# General questions about FMI
 
-### How are the FMI version numbers defined and what does backwards compatibility of a minor version mean?
+## How are the FMI version numbers defined and what does backwards compatibility of a minor version mean?
 
 According to the FMI development process (link), the version number of an FMI release is defined in the following way:
 
@@ -25,7 +26,7 @@ A change to the previous FMI version is called backwards compatible if every FMU
 - New function prototypes can be added in the new version, but existing function prototypes cannot be changed and cannot be removed.
 - New struct prototypes can be added in the new version, but existing struct prototypes cannot be changed and cannot be removed.
 
-### Why shall the next FMI release with new features be 3.0 and not 2.1?
+## Why shall the next FMI release with new features be 3.0 and not 2.1?
 
 After intense struggles to build easy to understand FMI Change Proposals (FCPs), the FMI Steering Committee decided that a point was reached where the cost to keep the FMI 2.1 release backward compatible with 2.0 was too high. Consequently, the decision was reached to rename the next release to "FMI 3.0".
 
@@ -38,21 +39,21 @@ After intense struggles to build easy to understand FMI Change Proposals (FCPs),
 We are certain that FMI 3.0 will be simpler to understand and implement now that we can simplify the FCPs.
 
 
-### What are the license and usage conditions for the FMI standard?
+## What are the license and usage conditions for the FMI standard?
 
 Access and use of the FMI standard is free of charge. However, vendors may charge for their tools to support the FMI standard, either by exporting FMUs or by importing FMUs.
 
 **To be clear: While the FMI standard is open and free, commercial implementations might not be.**
 
 
-### How can I join the FMI Mailing Lists?
+## How can I join the FMI Mailing Lists?
 
 - The “FMI-Info-Mailing list” is used for public announcements. You can find a registration link on our contact page.
 - The “FMI design” Mailing list is used by active developers of FMI (typically members of the FMI Advisory or Steering Committee). If you are interested please contact contact@fmi-standard.org
 - The “FMI Steering” Mailing list is used by members of the FMI Steering Committee. To join you need to be a member of the FMI Steering Committee.
 
 
-### How is FMI related to Modelica?
+## How is FMI related to Modelica?
 
 - Technically FMI is not related to Modelica, and can be seen as a complementary technology.
 - The intention of the FMI project is to be neutral with respect to tools, technologies (e.g. solvers, OS, files, systems…) and languages (including Modelica).
@@ -61,7 +62,7 @@ Access and use of the FMI standard is free of charge. However, vendors may charg
 
 # I'm a modeler and want to use FMI in my simulation tool
 
-### How can I get a first overview on FMI?
+## How can I get a first overview on FMI?
 
 Please have a look at the literature page, especially on the overview talks/slides from the 8th, 9th and 10th Modelica Conference
 
@@ -70,27 +71,27 @@ Please have a look at the literature page, especially on the overview talks/slid
 - FMI 2.0: Presentations about new features and applications ZIP
 
 
-### Does my simulation tool support FMI?
+## Does my simulation tool support FMI?
 
 Please see the FMI tools page for a list of tools for that tool vendors have announced their support of FMI.
 
 **While the FMI project defines cross check rules, the tool vendors carry sole responsibility for their stated FMI support and the provided compatibility results.**
 
 
-### Where can I get help when I have problems related to FMI in my simulation tool?
+## Where can I get help when I have problems related to FMI in my simulation tool?
 
 - Typically an exporting and an importing tool are involved in FMI-based simulation. So if problems occur and if it is not obvious which tool causes the problem, you should communicate the problem to the support team of both involved tools
 - As a general discussion forum about FMI, you may use the FMI forum on Stack Overflow
 
 
-### Is there a tool vendor independent way to access model information during simulation?
+## Is there a tool vendor independent way to access model information during simulation?
 
 ASAM XIL-MA is a standardized API that allows the access of model parameters, stimulations and simulation results and to control simulation experiments as well. Please see the related ASAM XIL-MA section.
 
 
 # I'm a developer and want to support FMI with my tool
 
-### What and in which order should I read/do to get started with FMI technology?
+## What and in which order should I read/do to get started with FMI technology?
 
 That depends mostly on your background knowledge. We assume here you already have fundamental knowledge of simulation technology (ODE vs. DAE, zero-crossing, state/time events, derivatives etc.):
 
@@ -100,7 +101,7 @@ That depends mostly on your background knowledge. We assume here you already hav
 - Re-read the standard document in detail.
 
 
-### Does FMI 2.0 support Partial Differential Equations (PDEs)?
+## Does FMI 2.0 support Partial Differential Equations (PDEs)?
 
 There are two kinds of FMI variants: Model Exchange and Co-Simulation.
 
@@ -111,7 +112,7 @@ The second kind, Co-Simulation FMUs, can contain any kind of simulation componen
 But explicitly exposing a PDE to a solver using FMUs is currently not supported.
 
 
-### I added my test FMUs/Cross-Check results but the tools page does not show "green". Why?
+## I added my test FMUs/Cross-Check results but the tools page does not show "green". Why?
 
 The Cross-Check Rules list a number of conditions before turning an entry “green”. In short:
 
@@ -121,6 +122,6 @@ The Cross-Check Rules list a number of conditions before turning an entry “gre
 Please refer to the complete set of rules and notes.
 
 
-### Why are the badge-numbers of the platform-drop-down not adding up to the badge-number in the overview?
+## Why are the badge-numbers of the platform-drop-down not adding up to the badge-number in the overview?
 
 The platform-drop-down list contains only platforms the tool has passed the Cross-Check Rules. But the overview lists all FMUs or Cross-Check Results submitted.

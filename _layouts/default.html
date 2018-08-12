@@ -45,7 +45,12 @@
 </header>
 
 <main>
+
   <div class="container my-5">
+  {% if page.toc %}
+  {% include toc.html html=content %}
+  {% endif %}
+
   {{ content }}
   </div>
 </main>
