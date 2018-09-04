@@ -51,7 +51,7 @@
     <thead>
       {% for column in mydata[0] %}
         {% if column[0] == nil %}
-        <th></th>
+        <th><i class="fas fa-caret-down"></i> Importing Tool</th>
         {% else %}
         <th class="rotate"><div><span>{{ column[0] }}</span></div></th>
         {% endif %}
