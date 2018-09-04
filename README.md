@@ -71,4 +71,4 @@ Linking to a PDF for readers to download:
    jekyll serve --livereload
    ```
 
-5. Now browse to [http://localhost:4000](http://localhost:4000){:target="_blank"}
+5. Now browse to [http://localhost:4000](http://localhost:4000)
